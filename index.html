@@ -1,29 +1,22 @@
-<html>
+<!DOCTYPE html>
+
 <head>
-<title>
-Login page
-</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
+
 <body>
-<form name="login">
-Username<input type="text" name="userid"/>
-Password<input type="password" name="pswrd"/>
-<input type="button" onclick="check(this.form)" value="Login"/>
-<input type="reset" value="Cancel"/>
-</form>
-<script language="javascript">
-function check(form)/*function to check userid & password*/
-{
- /*the following code checkes whether the entered userid and password are matching*/
- if(form.userid.value == "findthemagic" && form.pswrd.value == "hunter*123")
-  {
-    window.open('magic.html')/*opens the target page while Id & password matches*/
-  }
- else
- {
-   alert("That was not magical....try again")/*displays error message*/
-  }
-}
-</script>
+  <div class="login">
+	<h3> Ai primit un user si o parola? </h3>
+    <form method="post">
+    	<input type="text" name="userid" required="required" />
+      <input type="password" name="pswrd" required="required" />
+      <button type="submit" onclick="check(this.form)" class="btn btn-primary btn-block btn-large">Let me in</button>
+    </form>
+</div>
+
+	<script src="validations.js"></script>
+
 </body>
 </html>
